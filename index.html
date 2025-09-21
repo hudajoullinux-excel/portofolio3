@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV M. Nurul Huda</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background: #f4f4f9; color: #333; line-height: 1.6; }
+
+    .container {
+      display: flex;
+      max-width: 1100px;
+      margin: 20px auto;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .sidebar {
+      background: linear-gradient(180deg, #4b0082, #800080);
+      color: white;
+      padding: 20px;
+      width: 35%;
+    }
+
+    .profile img {
+      width: 150px; height: 150px; border-radius: 50%;
+      display: block; margin: 0 auto 10px;
+      border: 4px solid white; object-fit: cover;
+    }
+    .profile h2 { text-align: center; margin-top: 10px; font-size: 20px; }
+
+    h3.section-title {
+      background: #ffd500;
+      color: black;
+      padding: 6px 10px;
+      border-radius: 5px;
+      margin: 15px 0 10px;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .contact p, .biodata p { margin: 5px 0; font-size: 14px; }
+
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .content h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      background: #ffd500;
+      padding: 6px 12px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .content section { margin-bottom: 20px; }
+
+    .content h3 {
+      background: #800080;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    ul { list-style: none; padding-left: 15px; }
+    ul li { margin-bottom: 6px; position: relative; }
+    ul li::before {
+      content: "•";
+      color: #800080;
+      font-weight: bold;
+      position: absolute;
+      left: -15px;
+    }
+
+    /* Skill Progress Bar */
+    .skill { margin-bottom: 15px; }
+    .skill-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .skill-name i { color: #ffd500; }
+
+    .progress-container {
+      background: #eee;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      height: 25px;
+      cursor: pointer;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, #4b0082, #800080);
+      border-radius: 20px;
+      text-align: right;
+      padding-right: 10px;
+      color: white;
+      font-size: 13px;
+      line-height: 25px;
+      transition: width 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    }
+
+    /* Tooltip */
+    .progress-container:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 768px) {
+      .container { flex-direction: column; }
+      .sidebar { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="profil.jpg" alt="Foto Profil">
+        <h2>M. NURUL HUDA</h2>
+      </div>
+
+      <section class="biodata">
+        <h3 class="section-title"><i class="fa-solid fa-id-card"></i> BIODATA</h3>
+        <p><b>TTL:</b> Pekalongan, 31 Maret 1985</p>
+        <p><b>Jenis Kelamin:</b> Laki-laki</p>
+        <p><b>Status:</b> Menikah</p>
+        <p><b>Alamat:</b> Jl. Sutan Syahrir No.20 Gg.20 Rt:03/03, Pasisir, Pekalongan Barat</p>
+      </section>
+
+      <section class="contact">
+        <h3 class="section-title"><i class="fa-solid fa-phone"></i> KONTAK</h3>
+        <p><b>Email:</b> hudajoulbr@gmail.com</p>
+        <p><b>HP:</b> 0823-1344-xxxx</p>
+      </section>
+
+      <!-- Kemampuan dipindah ke sidebar -->
+      <section class="skills">
+        <h3 class="section-title"><i class="fa-solid fa-code"></i> KEMAMPUAN</h3>
+        <div class="skill">
+          <div class="skill-name"><i class="fa-solid fa-network-wired"></i> Networking</div>
+          <div class="progress-container" data-tooltip="Menguasai manajemen jaringan & konfigurasi LAN/WAN">
+            <div class="progress-bar" data-progress="90">90%</div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name"><i class="fa-solid fa-server"></i> Linux Server</div>
+          <div class="progress-container" data-tooltip="Instalasi & administrasi server berbasis Linux (Debian/Ubuntu)">
+            <div class="progress-bar" data-progress="85">85%</div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name"><i class="fa-solid fa-code"></i> Web Development</div>
+          <div class="progress-container" data-tooltip="HTML, CSS, JavaScript untuk website modern">
+            <div class="progress-bar" data-progress="75">75%</div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name"><i class="fa-solid fa-database"></i> Database</div>
+          <div class="progress-container" data-tooltip="MySQL, PostgreSQL, manajemen database">
+            <div class="progress-bar" data-progress="70">70%</div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name"><i class="fa-solid fa-paint-brush"></i> Design Graphic</div>
+          <div class="progress-container" data-tooltip="Adobe Photoshop, Illustrator, CorelDraw">
+            <div class="progress-bar" data-progress="85">85%</div>
+          </div>
+        </div>
+      </section>
+    </aside>
+
+    <!-- Konten utama -->
+    <main class="content">
+      <h2>M. NURUL HUDA</h2>
+
+      <section>
+        <h3><i class="fa-solid fa-graduation-cap"></i> PENDIDIKAN</h3>
+        <ul>
+          <li>R.A. Muslimat Pasisari - 1992</li>
+          <li>MSI XVII Pabean - 1998</li>
+          <li>SMPN 8 Pekalongan - 2002</li>
+          <li>SMK Ma’arif NU Tirto/SMART - 2005</li>
+          <li>STMIK-WP Pekalongan - 2009</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3><i class="fa-solid fa-users"></i> ORGANISASI</h3>
+        <ul>
+          <li>Wakil Ketua OSIS SMPN 8 Pekalongan (1999)</li>
+          <li>Wakil Ketua OSIS SMK SMART (2003)</li>
+          <li>Wakil Ketua Pradana SMK SMART (2003)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3><i class="fa-solid fa-trophy"></i> PRESTASI</h3>
+        <ul>
+          <li>Peringkat 2 Cawu-3 Tk.III SMPN 8 (2001)</li>
+          <li>Peringkat 2 Semester-1 SMK SMART (2003)</li>
+          <li>Peringkat 3 Semester-6 SMK SMART (2005)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3><i class="fa-solid fa-briefcase"></i> PENGALAMAN</h3>
+        <ul>
+          <li>2005 - Karyawan TU di SMK SMART</li>
+          <li>2008 - Teknisi Lab Komputer di SMK SMART</li>
+          <li>2009 - Guru Produktif TKJ di SMK SMART (2009–2021)</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Animasi progress bar
+    document.addEventListener("DOMContentLoaded", () => {
+      const bars = document.querySelectorAll(".progress-bar");
+      bars.forEach(bar => {
+        const value = bar.getAttribute("data-progress");
+        setTimeout(() => {
+          bar.style.width = value + "%";
+        }, 500);
+      });
+    });
+  </script>
+</body>
+</html>
