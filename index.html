@@ -60,7 +60,9 @@
       display: inline-block;
     }
 
-    .content section { margin-bottom: 20px; }
+    .content section {
+      margin-bottom: 20px;
+    }
 
     .content h3 {
       background: #800080;
@@ -83,14 +85,7 @@
 
     /* Skill Progress Bar */
     .skill { margin-bottom: 15px; }
-    .skill-name {
-      font-weight: bold;
-      margin-bottom: 5px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .skill-name i { color: #ffd500; }
+    .skill-name { font-weight: bold; margin-bottom: 5px; }
 
     .progress-container {
       background: #eee;
@@ -157,41 +152,6 @@
         <p><b>Email:</b> hudajoulbr@gmail.com</p>
         <p><b>HP:</b> 0823-1344-xxxx</p>
       </section>
-
-      <!-- Kemampuan dipindah ke sidebar -->
-      <section class="skills">
-        <h3 class="section-title"><i class="fa-solid fa-code"></i> KEMAMPUAN</h3>
-        <div class="skill">
-          <div class="skill-name"><i class="fa-solid fa-network-wired"></i> Networking</div>
-          <div class="progress-container" data-tooltip="Menguasai manajemen jaringan & konfigurasi LAN/WAN">
-            <div class="progress-bar" data-progress="87">87%</div>
-          </div>
-        </div>
-        <div class="skill">
-          <div class="skill-name"><i class="fa-solid fa-server"></i> Linux Server</div>
-          <div class="progress-container" data-tooltip="Instalasi & administrasi server berbasis Linux (Debian/Ubuntu)">
-            <div class="progress-bar" data-progress="85">85%</div>
-          </div>
-        </div>
-        <div class="skill">
-          <div class="skill-name"><i class="fa-solid fa-code"></i> Web Development</div>
-          <div class="progress-container" data-tooltip="HTML, CSS, JavaScript untuk website modern">
-            <div class="progress-bar" data-progress="75">75%</div>
-          </div>
-        </div>
-        <div class="skill">
-          <div class="skill-name"><i class="fa-solid fa-database"></i> Database</div>
-          <div class="progress-container" data-tooltip="MySQL, PostgreSQL, manajemen database">
-            <div class="progress-bar" data-progress="70">70%</div>
-          </div>
-        </div>
-        <div class="skill">
-          <div class="skill-name"><i class="fa-solid fa-paint-brush"></i> Design Graphic</div>
-          <div class="progress-container" data-tooltip="Adobe Photoshop, Illustrator, CorelDraw">
-            <div class="progress-bar" data-progress="85">85%</div>
-          </div>
-        </div>
-      </section>
     </aside>
 
     <!-- Konten utama -->
@@ -235,6 +195,41 @@
           <li>2009 - Guru Produktif TKJ di SMK SMART (2009–2021)</li>
         </ul>
       </section>
+
+      <!-- Skill Section -->
+      <section>
+        <h3><i class="fa-solid fa-courses"></i> KEMAMPUAN</h3>
+        <div class="skill">
+          <div class="skill-name">Networking</div>
+          <div class="progress-container" data-tooltip="Menguasai manajemen jaringan & konfigurasi LAN/WAN">
+            <div class="progress-bar" data-progress="90">90%</div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">Linux Server</div>
+          <div class="progress-container" data-tooltip="Instalasi & administrasi server berbasis Linux (Debian/Ubuntu)">
+            <div class="progress-bar" data-progress="85">85%</div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">Web Development</div>
+          <div class="progress-container" data-tooltip="HTML, CSS, JavaScript untuk website modern">
+            <div class="progress-bar" data-progress="75">75%</div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">Database</div>
+          <div class="progress-container" data-tooltip="MySQL, PostgreSQL, manajemen database">
+            <div class="progress-bar" data-progress="70">70%</div>
+          </div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">Desain Grafis</div>
+          <div class="progress-container" data-tooltip="Photoshop, Coreldraw, Canva, Ilustrator">
+            <div class="progress-bar" data-progress="85">85%</div>
+          </div>
+        </div>        
+      </section>
     </main>
   </div>
 
@@ -252,4 +247,3 @@
   </script>
 </body>
 </html>
-
